@@ -1,0 +1,15 @@
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/bin/Debug/net6.0/PDI.BloodBank.ConsoleApplication
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/bin/Debug/net6.0/PDI.BloodBank.ConsoleApplication.deps.json
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/bin/Debug/net6.0/PDI.BloodBank.ConsoleApplication.runtimeconfig.json
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/bin/Debug/net6.0/PDI.BloodBank.ConsoleApplication.dll
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/bin/Debug/net6.0/PDI.BloodBank.ConsoleApplication.pdb
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.csproj.AssemblyReference.cache
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.GeneratedMSBuildEditorConfig.editorconfig
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.AssemblyInfoInputs.cache
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.AssemblyInfo.cs
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.csproj.CoreCompileInputs.cache
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.dll
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/refint/PDI.BloodBank.ConsoleApplication.dll
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.pdb
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/PDI.BloodBank.ConsoleApplication.genruntimeconfig.cache
+/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/Debug/net6.0/ref/PDI.BloodBank.ConsoleApplication.dll
