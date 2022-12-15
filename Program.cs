@@ -1,9 +1,18 @@
-﻿namespace PDI.BloodBank.ConsoleApplication{
-    
-    class Program{
+﻿using PDI.BloodBank.ConsoleApplication.src.Classes;
+
+namespace PDI.BloodBank.ConsoleApplication
+{
+
+    class Program
+    {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
+            Doador d1 = new Doador();
+
+            d1.cadastra();
+            d1.exibeDadosDoador();
+
+            Console.ReadKey();
         }
     }
 }

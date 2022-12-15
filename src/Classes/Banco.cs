@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PDI.BloodBank.ConsoleApplication.src.Classes
 {
-    public class Estoque
+    public class Banco
     {
         
     }
