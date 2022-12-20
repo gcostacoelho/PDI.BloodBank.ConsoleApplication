@@ -11,8 +11,6 @@ namespace PDI.BloodBank.ConsoleApplication
 
             d1.cadastra();
             d1.exibeDadosDoador();
-
-            Console.ReadKey();
         }
     }
 }
