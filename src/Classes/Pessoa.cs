@@ -7,7 +7,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 {
     public class Pessoa
     {
-        public String? Nome { get; set;}
-        public DateTime DataNascimento { get; set; }
+        protected String? Nome { get; set; }
+        protected DateTime DataNascimento { get; set; }
     }
 }
