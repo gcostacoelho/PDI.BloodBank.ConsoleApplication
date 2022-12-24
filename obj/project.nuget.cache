@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F+1Av01TkrH8iTGGabWHXIA9vaCvv/+YODesiCb0GxE0JuYxv/ACQzQg4GL99Sv62mELqH4fgd4bocNqOevNdg==",
+  "dgSpecHash": "FeXSsOdlt2I5NRLPrWCpurVtwZ4dXune8RkbXeQjjErKTI6Gr0Z7450G+r7hC+UZyv/ROvLQVFDYsxcpBy33sQ==",
   "success": true,
-  "projectFilePath": "/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/PDI.BloodBank.ConsoleApplication.csproj",
+  "projectFilePath": "C:\\Users\\gustavo.costa\\Documents\\git_codes\\PDI.BloodBank.ConsoleApplication\\PDI.BloodBank.ConsoleApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
