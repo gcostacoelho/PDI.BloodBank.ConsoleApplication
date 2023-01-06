@@ -14,7 +14,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
         public Doador cadastraDoador()
         {
             DateOnly dataNascimento;
-            string nome = "", tipoSangue = "", input;
+            string nome = "", tipoSangue = "", cpf = "", input;
             float peso = 0;
 
             try
@@ -92,6 +92,20 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                 do
                 {
+                    Console.WriteLine("Digite o CPF do doador: ");
+                    input = Console.ReadLine();
+
+                    if (input != null)
+                    {
+                        peso = float.Parse(input);
+                    }
+
+                } while (input == "");
+                
+                Console.Clear();
+
+                do
+                {
                     Console.WriteLine("Digite o peso do doador: ");
                     input = Console.ReadLine();
 
@@ -102,12 +116,12 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                 } while (input == "");
 
-                return new Doador(nome, dataNascimento, tipoSangue, peso);
+                return new Doador(nome, dataNascimento, tipoSangue, peso, cpf);
             }
             catch (InvalidCastException e)
             {
                 Console.WriteLine(e);
-                return new Doador(nome, dataNascimento, tipoSangue, peso);
+                return new Doador(nome, dataNascimento, tipoSangue, peso, cpf);
             }
         }
 
