@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gustavo.costa\\.nuget\\packages\\": {}
+    "/home/gustavo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gustavo.costa\\Documents\\git_codes\\PDI.BloodBank.ConsoleApplication\\PDI.BloodBank.ConsoleApplication.csproj",
+      "projectUniqueName": "/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/PDI.BloodBank.ConsoleApplication.csproj",
       "projectName": "PDI.BloodBank.ConsoleApplication",
-      "projectPath": "C:\\Users\\gustavo.costa\\Documents\\git_codes\\PDI.BloodBank.ConsoleApplication\\PDI.BloodBank.ConsoleApplication.csproj",
-      "packagesPath": "C:\\Users\\gustavo.costa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gustavo.costa\\Documents\\git_codes\\PDI.BloodBank.ConsoleApplication\\obj\\",
+      "projectPath": "/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/PDI.BloodBank.ConsoleApplication.csproj",
+      "packagesPath": "/home/gustavo/.nuget/packages/",
+      "outputPath": "/media/gustavo/Internal-data/Projects/C#/PDI.BloodBank.ConsoleApplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gustavo.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/gustavo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -51,7 +49,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.112\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }
