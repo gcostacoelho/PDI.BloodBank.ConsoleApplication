@@ -2,19 +2,19 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 {
     public class Enfermeiro : Pessoa
     {
-        private string? corem { get; set; }
+        private string Corem { get; set; }
 
         public Enfermeiro(string nome, DateOnly DataNascimento, string registro)
         {
             this.Nome = nome;
             this.DataNascimento = DataNascimento;
-            this.corem = registro;
+            this.Corem = registro;
         }
 
         public Doador cadastraDoador()
         {
             DateOnly dataNascimento;
-            string? nome = "", tipoSangue = "", input;
+            string nome = "", tipoSangue = "", input;
             float peso = 0;
 
             try
