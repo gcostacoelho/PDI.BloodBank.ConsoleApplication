@@ -9,6 +9,7 @@ namespace PDI.BloodBank.ConsoleApplication
         {
             Doador doador = new Doador();
             Banco banco = new Banco();
+            Relatorio relatorio = new Relatorio();
 
             Enfermeiro enfermeiroChefe = new Enfermeiro("Gustavo Costa", new DateOnly(2003, 05, 16), "0000011-01");
 
@@ -33,9 +34,8 @@ namespace PDI.BloodBank.ConsoleApplication
                 {
                     case 1:
                         doador.adicionaDoadorNaLista(enfermeiroChefe.cadastraDoador());
+
                         Console.Clear();
-                        
-                        doador.exibeDadosDoador();
                         Console.ReadKey();
                         break;
                     case 2:
@@ -45,13 +45,19 @@ namespace PDI.BloodBank.ConsoleApplication
                         Console.ReadKey();
                         break;
                     case 3:
-                        // Registra Saida
+                        enfermeiroChefe.registraSaida(banco);
+                        banco.exibeBanco();
+
+                        Console.ReadKey();
                         break;
                     case 4:
                         // Verifica estoque
                         break;
                     case 5:
-                        // Obtem relatórios
+                        relatorio.doadoresCadastrados(doador);
+
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                     default:
                         Console.WriteLine("Opção inválida");

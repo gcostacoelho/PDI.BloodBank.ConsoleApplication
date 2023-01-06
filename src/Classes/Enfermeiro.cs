@@ -147,7 +147,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             } while (input == "");
 
             var doador = d1.procuraDoador(cpf);
-            
+
             if (doador != null)
             {
                 b1.entradaBanco(doador);
@@ -157,6 +157,69 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                 Console.WriteLine("Parece que não temos ninguém com esse CPF cadastrado... Por favor tente novamente");
                 Console.ReadKey();
                 Console.Clear();
+            }
+        }
+
+        public void registraSaida(Banco b1)
+        {
+            Console.Clear();
+            string tipoSangue="", input;
+            float qtdSangue = 0;
+            
+            do
+            {
+                Console.WriteLine("Informe o tipo sanguineo a ser retirado: ");
+                Console.WriteLine("1 - A Positivo\n2 - A Negativo\n3 - B Positivo\n4 - B Negativo\n5 - AB Positivo\n6 - AB Negativo\n7 - O Positvo\n8 - O Negativo");
+
+                input = Console.ReadLine();
+
+                if (input != null)
+                {
+                    switch (input)
+                    {
+                        case "1":
+                            tipoSangue = "A Positivo";
+                            break;
+                        case "2":
+                            tipoSangue = "A Negativo";
+                            break;
+                        case "3":
+                            tipoSangue = "B Positivo";
+                            break;
+                        case "4":
+                            tipoSangue = "B Negativo";
+                            break;
+                        case "5":
+                            tipoSangue = "AB Positivo";
+                            break;
+                        case "6":
+                            tipoSangue = "AB Negativo";
+                            break;
+                        case "7":
+                            tipoSangue = "O Positivo";
+                            break;
+                        case "8":
+                            tipoSangue = "O Negativo";
+                            break;
+                        default:
+                            Console.WriteLine("Opção inválida, tente novamente");
+                            break;
+                    }
+                }
+            } while (input == "");
+
+            do
+            {
+                Console.WriteLine("Informe a quantidade de sangue a ser retirado: ");
+                input = Console.ReadLine();
+
+                qtdSangue = float.Parse(input);
+
+            } while (input == "");
+
+            if (tipoSangue != "" && qtdSangue > 0)
+            {
+                b1.saidaBanco(tipoSangue, qtdSangue);
             }
         }
     }

@@ -31,6 +31,31 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
         }
 
+        public void saidaBanco(string tipoSangue, float qtdSangueRetirado)
+        {
+            foreach (var key in estoqueSangues)
+            {
+                if (key.Key == tipoSangue)
+                {
+                    if (qtdSangueRetirado > key.Value)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Quantidade de sangue requerida é maior do que a que está no banco");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        estoqueSangues[key.Key] = key.Value - qtdSangueRetirado;
+
+                        Console.WriteLine("Retirado no banco feita");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                }
+            }
+        }
+
         public void exibeBanco()
         {
             foreach (var key in estoqueSangues)
