@@ -3,15 +3,16 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
     public class Doador : Pessoa
     {
         List<Doador> doadores = new List<Doador>();
-        private String TipoSanguineo { get; set; }
+        public String TipoSanguineo { get; private set; }
         private float Peso { get; set; }
 
         public Doador() { }
 
-        public Doador(string nome, DateOnly dataNascimento, string tipoSangue, float peso)
+        public Doador(string nome, DateOnly dataNascimento, string tipoSangue, float peso, string cpf)
         {
             this.Nome = nome;
             this.DataNascimento = dataNascimento;
+            this.cpf = cpf;
             this.TipoSanguineo = tipoSangue;
             this.Peso = peso;
         }

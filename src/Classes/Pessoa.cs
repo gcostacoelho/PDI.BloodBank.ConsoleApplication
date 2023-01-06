@@ -4,5 +4,6 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
     {
         protected String Nome { get; set; }
         protected DateOnly DataNascimento { get; set; }
+        protected string cpf { get; set; }
     }
 }
