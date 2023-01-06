@@ -8,6 +8,8 @@ namespace PDI.BloodBank.ConsoleApplication
         public static void Main(string[] args)
         {
             Doador doador = new Doador();
+            Banco banco = new Banco();
+
             Enfermeiro enfermeiroChefe = new Enfermeiro("Gustavo Costa", new DateOnly(2003, 05, 16), "0000011-01");
 
             do
@@ -30,12 +32,17 @@ namespace PDI.BloodBank.ConsoleApplication
                 switch (input)
                 {
                     case 1:
-                        doador.addDoadorToList(enfermeiroChefe.cadastraDoador());
+                        doador.adicionaDoadorNaLista(enfermeiroChefe.cadastraDoador());
                         Console.Clear();
+                        
                         doador.exibeDadosDoador();
+                        Console.ReadKey();
                         break;
                     case 2:
-                        // Registra entrada
+                        enfermeiroChefe.registraEntrada(doador, banco);
+                        banco.exibeBanco();
+                        
+                        Console.ReadKey();
                         break;
                     case 3:
                         // Registra Saida

@@ -19,6 +19,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
             try
             {
+                // Get Nome
                 do
                 {
                     Console.WriteLine("Digite o nome do doador: ");
@@ -33,6 +34,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                 Console.Clear();
 
+                // Get tipo sanguineo
                 do
                 {
                     Console.WriteLine("Informe o tipo sanguineo do doador: ");
@@ -77,6 +79,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                 Console.Clear();
 
+                // Get data de nascimento
                 do
                 {
                     Console.WriteLine("Digite a data de nascimento do doador: ");
@@ -90,6 +93,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                 Console.Clear();
 
+                // Get CPF
                 do
                 {
                     Console.WriteLine("Digite o CPF do doador: ");
@@ -97,13 +101,14 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                     if (input != null)
                     {
-                        peso = float.Parse(input);
+                        cpf = input;
                     }
 
                 } while (input == "");
-                
+
                 Console.Clear();
 
+                // Get Peso
                 do
                 {
                     Console.WriteLine("Digite o peso do doador: ");
@@ -121,9 +126,38 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             catch (InvalidCastException e)
             {
                 Console.WriteLine(e);
-                return new Doador(nome, dataNascimento, tipoSangue, peso, cpf);
+                return default;
             }
         }
 
+        public void registraEntrada(Doador d1, Banco b1)
+        {
+            string input, cpf = "";
+
+            do
+            {
+                Console.WriteLine("Digite o CPF do doador: ");
+                input = Console.ReadLine();
+
+                if (input != null)
+                {
+                    cpf = input;
+                }
+
+            } while (input == "");
+
+            var doador = d1.procuraDoador(cpf);
+            
+            if (doador != null)
+            {
+                b1.entradaBanco(doador);
+            }
+            else
+            {
+                Console.WriteLine("Parece que não temos ninguém com esse CPF cadastrado... Por favor tente novamente");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
     }
 }
