@@ -8,9 +8,7 @@ namespace PDI.BloodBank.ConsoleApplication
         public static void Main(string[] args)
         {
             Doador doador = new Doador();
-            
             Relatorio relatorio = new Relatorio();
-
             Enfermeiro enfermeiroChefe = new Enfermeiro("Gustavo Costa", new DateOnly(2003, 05, 16), "0000011-01");
 
             do
@@ -54,7 +52,10 @@ namespace PDI.BloodBank.ConsoleApplication
                         Console.ReadKey();
                         break;
                     case 5:
-                        relatorio.doadoresCadastrados(doador);
+                        var hist = new Historico();
+
+                        hist.exibeHistorico();
+                        //relatorio.doadoresCadastrados(doador);
 
                         Console.ReadKey();
                         Console.Clear();
