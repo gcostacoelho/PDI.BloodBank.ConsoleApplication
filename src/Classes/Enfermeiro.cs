@@ -4,6 +4,8 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
     {
         private string Corem { get; set; }
 
+        private Banco banco = new Banco();
+
         public Enfermeiro(string nome, DateOnly DataNascimento, string registro)
         {
             this.Nome = nome;
@@ -130,7 +132,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
         }
 
-        public void registraEntrada(Doador d1, Banco b1)
+        public void registraEntrada(Doador d1)
         {
             string input, cpf = "";
 
@@ -150,7 +152,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
             if (doador != null)
             {
-                b1.entradaBanco(doador);
+                banco.entradaBanco(doador);
             }
             else
             {
@@ -160,12 +162,12 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
         }
 
-        public void registraSaida(Banco b1)
+        public void registraSaida()
         {
             Console.Clear();
-            string tipoSangue="", input;
+            string tipoSangue = "", input;
             float qtdSangue = 0;
-            
+
             do
             {
                 Console.WriteLine("Informe o tipo sanguineo a ser retirado: ");
@@ -219,8 +221,13 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
             if (tipoSangue != "" && qtdSangue > 0)
             {
-                b1.saidaBanco(tipoSangue, qtdSangue);
+                banco.saidaBanco(tipoSangue, qtdSangue);
             }
+        }
+
+        public void verificaEstoque()
+        {
+            banco.defineSituacao();
         }
     }
 }

@@ -29,6 +29,8 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                     estoqueSangues[key.Key] = key.Value + qtdSangue;
                 }
             }
+
+            Console.WriteLine("Registro de entrada no banco feito;");
         }
 
         public void saidaBanco(string tipoSangue, float qtdSangueRetirado)
@@ -56,11 +58,25 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
         }
 
-        public void exibeBanco()
+        public void defineSituacao()
         {
             foreach (var key in estoqueSangues)
             {
-                Console.WriteLine($"{key.Key} - {key.Value}");
+                
+                if (key.Value < 50)
+                {
+                    Console.WriteLine($"Tipo de Sangue - {key.Key}\nQuantidade - {key.Value}\nSituação - Baixo");
+                }
+                else if (key.Value == 50)
+                {
+                    Console.WriteLine($"Tipo de Sangue - {key.Key}\nQuantidade - {key.Value}\nSituação - Médio");
+                }
+                else if (key.Value > 50)
+                {
+                    Console.WriteLine($"Tipo de Sangue - {key.Key}\nQuantidade - {key.Value}\nSituação - Alto");
+                }
+
+                Console.WriteLine("------------------");
             }
         }
     }
