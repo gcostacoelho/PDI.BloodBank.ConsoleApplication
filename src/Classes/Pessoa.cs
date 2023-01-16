@@ -2,8 +2,8 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 {
     public abstract class Pessoa
     {
-        protected String Nome { get; set; }
-        protected DateOnly DataNascimento { get; set; }
-        protected string cpf { get; set; }
+        public String Nome { get; set; }
+        public DateOnly DataNascimento { get; set; }
+        public string cpf { get; set; }
     }
 }
