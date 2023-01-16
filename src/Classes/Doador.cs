@@ -20,6 +20,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
         public void adicionaDoadorNaLista(Doador doador)
         {
             doadores.Add(doador);
+            Console.WriteLine("Doador cadastrado com sucesso");
         }
 
         public Doador procuraDoador(string cpf)
