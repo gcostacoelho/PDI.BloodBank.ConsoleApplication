@@ -8,6 +8,7 @@ namespace PDI.BloodBank.ConsoleApplication
         public static void Main(string[] args)
         {
             Doador doador = new Doador();
+            Banco banco = new Banco();
             Relatorio relatorio = new Relatorio();
             Enfermeiro enfermeiroChefe = new Enfermeiro("Gustavo Costa", new DateOnly(2003, 05, 16), "0000011-01");
 
@@ -33,12 +34,11 @@ namespace PDI.BloodBank.ConsoleApplication
                     case 1:
                         doador.adicionaDoadorNaLista(enfermeiroChefe.cadastraDoador());
 
-                        Console.Clear();
                         Console.ReadKey();
                         break;
                     case 2:
                         enfermeiroChefe.registraEntrada(doador);
-                        
+
                         Console.ReadKey();
                         break;
                     case 3:
@@ -52,9 +52,9 @@ namespace PDI.BloodBank.ConsoleApplication
                         Console.ReadKey();
                         break;
                     case 5:
-                        var hist = new Historico();
+                        var _hist = banco.hist;
 
-                        hist.exibeHistorico();
+                        _hist.exibeHistorico();
                         //relatorio.doadoresCadastrados(doador);
 
                         Console.ReadKey();
@@ -64,8 +64,7 @@ namespace PDI.BloodBank.ConsoleApplication
                         Console.WriteLine("Opção inválida");
                         break;
                 }
-                
-                Console.Clear();
+
                 Console.WriteLine("Deseja fazer mais alguma coisa?\n1 - Sim\n2 - Não");
                 input = int.Parse(Console.ReadLine());
 

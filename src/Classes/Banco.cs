@@ -5,6 +5,8 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
         private string tipoSangue { get; set; }
         private float qtdSangue { get; set; }
 
+        public Historico hist = new Historico();
+        
         Dictionary<string, float> estoqueSangues = new Dictionary<string, float>()
         {
             { "A Positivo", 500 },
@@ -29,6 +31,10 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                     estoqueSangues[key.Key] = key.Value + qtdSangue;
                 }
             }
+
+            hist.adicionaEntradaHistorico(doador);
+            hist.exibeHistorico();
+
 
             Console.WriteLine("Registro de entrada no banco feito;");
         }
