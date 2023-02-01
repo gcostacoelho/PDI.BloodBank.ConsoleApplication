@@ -42,6 +42,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                 Console.WriteLine("---------------");
                 Console.WriteLine($"Nome - {doador.Nome}\nData de nascimento - {doador.DataNascimento.ToString("dd/MM/yyyy")}\nCPF - {doador.cpf}\nTipo sanguineo - {doador.TipoSanguineo}\nPeso - {doador.Peso} KG");
             }
+            Console.ReadKey();
         }
 
     }

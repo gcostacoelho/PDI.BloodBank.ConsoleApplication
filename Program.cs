@@ -20,6 +20,7 @@ namespace PDI.BloodBank.ConsoleApplication
                 Console.WriteLine("0 - Encerrar\n1 - Cadastrar novo doador\n2 - Registrar entrada\n3 - Registrar saida\n4 - Verificar estoque\n5 - Obter relatórios");
 
                 int input = int.Parse(Console.ReadLine());
+                banco = enfermeiroChefe.banco;
 
                 if (input == 0)
                 {
@@ -52,13 +53,39 @@ namespace PDI.BloodBank.ConsoleApplication
                         Console.ReadKey();
                         break;
                     case 5:
-                        var _hist = banco.hist;
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("-------MENU-------");
+                            Console.WriteLine("O que você deseja fazer?");
+                            Console.WriteLine("0 - Voltar\n1 - Ver doadores cadastrados\n2 - Ver registros de entrada\n3 - Ver registros de saída");
 
-                        _hist.exibeHistorico();
-                        //relatorio.doadoresCadastrados(doador);
+                            int inputRelatorio = int.Parse(Console.ReadLine());
 
-                        Console.ReadKey();
-                        Console.Clear();
+                            if (inputRelatorio == 0)
+                            {
+                                Console.Clear();
+                                break;
+                            }
+                            else if (inputRelatorio == 1)
+                            {
+                                relatorio.doadoresCadastrados(doador);
+                            }
+                            else if (inputRelatorio == 2)
+                            {
+                                relatorio.registros(banco, "entrada");
+                            }
+                            else if (inputRelatorio == 3)
+                            {
+                                relatorio.registros(banco, "saida");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Opção inválida");
+                                Console.ReadKey();
+                            }
+
+                        } while (true);
                         break;
                     default:
                         Console.WriteLine("Opção inválida");

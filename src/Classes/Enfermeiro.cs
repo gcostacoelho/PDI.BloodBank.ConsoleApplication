@@ -4,7 +4,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
     {
         private string Corem { get; set; }
 
-        private Banco banco = new Banco();
+        public Banco banco = new Banco();
 
         public Enfermeiro(string nome, DateOnly DataNascimento, string registro)
         {

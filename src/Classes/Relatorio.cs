@@ -6,5 +6,11 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
         {
             doador.exibeDadosDoador();
         }
+
+        public void registros(Banco banco, String tipoHistorico)
+        {
+            banco.hist.exibeHistorico(tipoHistorico);
+            Console.ReadKey();
+        }
     }
 }

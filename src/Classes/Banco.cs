@@ -33,8 +33,6 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
 
             hist.adicionaEntradaHistorico(doador);
-            hist.exibeHistorico();
-
 
             Console.WriteLine("Registro de entrada no banco feito;");
         }
@@ -55,7 +53,9 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                     else
                     {
                         estoqueSangues[key.Key] = key.Value - qtdSangueRetirado;
-
+                        
+                        hist.adicionaSaidaHistorico(tipoSangue, qtdSangueRetirado);
+                        
                         Console.WriteLine("Retirado no banco feita");
                         Console.ReadKey();
                         Console.Clear();
