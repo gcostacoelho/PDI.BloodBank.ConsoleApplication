@@ -45,10 +45,8 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
                 {
                     if (qtdSangueRetirado > key.Value)
                     {
-                        Console.Clear();
                         Console.WriteLine("Quantidade de sangue requerida é maior do que a que está no banco");
                         Console.ReadKey();
-                        Console.Clear();
                     }
                     else
                     {

@@ -106,15 +106,24 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
             foreach (var item in hist)
             {
-                for (int i = 0; i < item.Value.Count; i++)
+                if (item.Value.Count == 0)
                 {
-                    Console.WriteLine($"{item.Key}:");
-
-                    foreach (var _item in item.Value[i])
-                    {
-                        Console.WriteLine($"\t{_item.Key}: {_item.Value}");
-                    }
+                    Console.WriteLine($"{item.Key}: Nenhum registro");
                     Console.WriteLine("-------------");
+                }
+                else
+                {
+
+                    for (int i = 0; i < item.Value.Count; i++)
+                    {
+                        Console.WriteLine($"{item.Key}:");
+
+                        foreach (var _item in item.Value[i])
+                        {
+                            Console.WriteLine($"\t{_item.Key}: {_item.Value}");
+                        }
+                        Console.WriteLine("-------------");
+                    }
                 }
             }
         }

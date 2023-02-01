@@ -37,10 +37,17 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
         public void exibeDadosDoador()
         {
-            foreach (var doador in doadores)
+            if (doadores.Count == 0)
             {
-                Console.WriteLine("---------------");
-                Console.WriteLine($"Nome - {doador.Nome}\nData de nascimento - {doador.DataNascimento.ToString("dd/MM/yyyy")}\nCPF - {doador.cpf}\nTipo sanguineo - {doador.TipoSanguineo}\nPeso - {doador.Peso} KG");
+                Console.WriteLine("Não há nenhum doador cadastrado");
+            }
+            else
+            {
+                foreach (var doador in doadores)
+                {
+                    Console.WriteLine("---------------");
+                    Console.WriteLine($"Nome - {doador.Nome}\nData de nascimento - {doador.DataNascimento.ToString("dd/MM/yyyy")}\nCPF - {doador.cpf}\nTipo sanguineo - {doador.TipoSanguineo}\nPeso - {doador.Peso} KG");
+                }
             }
             Console.ReadKey();
         }

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace PDI.BloodBank.ConsoleApplication.src.Classes
 {
     public class Enfermeiro : Pessoa
@@ -89,7 +91,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
 
                     if (input != null)
                     {
-                        dataNascimento = DateOnly.Parse(input);
+                        dataNascimento = DateOnly.Parse(input, new CultureInfo("pt-BR"));
                     }
                 } while (input == "");
 
@@ -127,7 +129,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             }
             catch (InvalidCastException e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine($"Oops, parece que aconteceu algum erro, tente novamente mais tarde\n{e}");
                 return default;
             }
         }
@@ -167,7 +169,7 @@ namespace PDI.BloodBank.ConsoleApplication.src.Classes
             Console.Clear();
             string tipoSangue = "", input;
             float qtdSangue = 0;
-
+            
             do
             {
                 Console.WriteLine("Informe o tipo sanguineo a ser retirado: ");
